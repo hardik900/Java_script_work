@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function display(dd){
+        //     alert(dd)
+        // }
+        // let prom = new Promise(function(myResolve, myReject){
+        //     let x = prompt("Enter the value")
+        //     if(x==0){
+        //         myResolve("Done")
+        //     }
+        //     else{
+        //         myReject("Error")
+        //     }
+        // });
+        // prom.then(
+        //     function(value){
+        //         display(value);
+        //     },
+        //     function(error){
+        //         display(error)
+        //     }
+        // );
+        
+
+
+        let P1 = new Promise((resolve ,reject)=>{
+            console.log("Promises is Pending p1");
+            // setTimeout(()=>{
+                // console.log("I have a promise and I am resolved after 5 seconds");
+                user_input = prompt("Enter the value")
+                if(user_input == 6)
+                {
+                    resolve(true);
+                }else{
+                    reject("Error Occured")
+                }
+                
+                // console.log(Promises);
+            // },5000);
+        });
+
+        // let P2 = new Promise((resolve ,reject)=>{
+        //     console.log("Promises is Pending p2");
+        //     setTimeout(()=>{
+        //         // console.log("I have a promise and I am rejected after 5 seconds");
+        //         reject(new Error("Error occured"))
+        //         // console.log(Promises1);
+        //     },5000);
+        // });
+
+        P1.then(
+            function(value){
+                console.log(value)
+            },
+            function(error){
+                console.log(error);
+            }
+        );
+
+        // P2.catch((error)=>{
+        //     console.log("Error is handle by catch");
+        // })
+        // console.log(Promises);
+    </script>
+</body>
+</html>

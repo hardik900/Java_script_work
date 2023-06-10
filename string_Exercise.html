@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input type="text" id="enter" onclick="myfun()"> -->
+    <script>
+        // check string is empty or not
+            var str = "";
+            if(str === ""){
+                console.log("String is Empty");
+            }
+            else{
+                console.log("String is not Empty");
+            }
+
+        // convert string into array 
+            let str1  = "Robin Singh";
+            console.log(str1);
+            console.log(typeof(str1));
+            ww = str1.split(" ");
+            console.log(ww);
+            console.log(typeof(ww));
+
+        // Take out specific part from string
+            let str2 = "Robin Singh";
+            console.log(str2.slice(0,5));
+
+        // Protect email from fraud users
+        const protect_email = (receive) =>{
+            console.log(receive);
+            console.log(store = receive.split("@"));
+            let part_1 = store[0];
+            let part_2 = store[1];
+            
+            Math.floor(part_1.length/2)
+            part_1 = receive.slice(0,7)
+            return part_1 + "...@" + part_2;
+        }
+        console.log(protect_email("rohan_saini_123@gmail.com"));
+
+        // Convert first letter of string to uppercase
+        {
+            let str = "javascript is not easy";
+            console.log(str[0].toUpperCase()+ str.substr(1));
+        }
+
+
+        // convert first letter of every word to uppercase 
+        // pending
+        {
+            let str = "my name is hardik saini";
+            console.log(str.length)
+            let ss = str.split(" ");
+            console.log(ss)
+            for(i=0; i<=ss.length; i++){
+                // console.log(ss[i].charAt(0).toUpperCase());
+            }
+        }
+
+        // check word in a given string
+
+        var qq = "hardik, I am a Frontend developer";
+        console.log(qq.search("developer"));
+        console.log(qq.match("I"));
+
+        // extract amount(1000) from string
+        {
+            let str = "Please give Rs 1000 ";
+            let str1 = str.slice(-5, -1)
+            console.log(str1);
+        }
+
+    </script>
+</body>
+</html>

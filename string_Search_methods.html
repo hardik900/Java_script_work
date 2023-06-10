@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- What we learn in this file -->
+        <!-- 1. String indexOf()
+        2. String lastIndexOf()
+        3. String search()
+        4. String match()
+        5. String matchAll()
+        6. String includes()
+        7. String startsWith()
+        8. String endsWith() -->
+
+        <script>
+            var string1 = "I am a Frontend developer in Consolebit.";
+            var b = "hello" ;
+            console.log(string1);
+
+            console.log(string1.indexOf('Frontend'));
+            //console.log(string1.lastIndexOf('Frontend')); Doubt
+            console.log(string1.search("developer"));
+            var string2 = string1.match("am a Frontend")
+            console.log(string2.length + "   " + string2); "<br>"
+            console.log(string1.includes( "Consolebit"));
+            console.log(string1.includes("Consolebit",10));
+            console.log(string1.startsWith("I"));
+            console.log(string1.startsWith("am", 2));
+            console.log(string1.endsWith("Consolebit."));
+            console.log(string1.endsWith("a", 6));
+            console.log(`${b} ${string1}`);
+            console.log(typeof(string1));
+
+
+
+        </script>
+    </body>
+</html>

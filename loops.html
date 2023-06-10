@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+        <!-- 1. for 
+        2. for/in
+        3. for/of
+        4. while
+        5. do/while -->
+    <script>
+        console.log("--------------------------Types of loops-------------------------");
+        
+        console.log("for_of lnoop for array");
+        // for_of loop for array
+        var arr = [1,2,3,4,5,6];
+        for(x of arr){
+            console.log(x);
+        }
+        
+        console.log("for_of loop for object");
+        // for_of loop for object
+        var arr_obj = [
+                    {fname : "Hardik"},
+                    {lname : "saini"},
+                    {age   : 18}
+        ];
+        for(x of arr_obj){
+            console.log(x);
+        }
+        
+        console.log("for_of loop for string");
+        // for_of loop for string
+        var str = "Hello, I am in Consolebit"
+        for(x of str){
+            console.log(x);
+        }
+
+        console.log("for_in loop for object");
+        // for_in loop for object
+        brr_obj = {
+            Name : "Chirag",
+            class : "6",
+            Subject : "English"
+        };
+        for(x in brr_obj){
+            console.log(x, brr_obj[x]);
+        }
+
+        console.log("for_in loop for array");
+        // for_in loop for array
+        brr = [2,4,6,8,10];
+        for(x in brr){
+            console.log(x + " = ", brr[x]);
+        }
+
+        
+        console.log("for_in loop for string");
+        // for_in loop for string
+        brr_str1 = "Hello, I am frontend developer";
+        for(x in brr_str1){
+            console.log(x, brr_str1[x]);
+        }
+    </script>
+</body>
+</html>

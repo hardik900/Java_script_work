@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // convert string to number
+        var txt = "I am in Consolebit";
+        console.log("Before Conversion " + typeof(txt));
+        console.log(txt = Number(txt));
+        console.log("After Conversion " + typeof(txt));
+
+        // convert number to string
+        var a = 90;
+        console.log("Before Conversion " + typeof(a));
+
+        // tostring method also convert number to string
+        console.log((a).toString());
+        console.log("After Conversion " + typeof(a));
+
+        // convert boolean to string
+        var aa = false;
+        console.log(typeof(aa));
+        console.log(aa = aa.toString());
+        console.log(typeof(aa));
+
+        // convert string to boolean
+        console.log(aa = Boolean(aa));
+        console.log(typeof(aa));
+
+        
+
+    </script>
+</body>
+</html>

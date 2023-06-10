@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const result = (receive_arg) =>{
+            console.log("function is called");
+            console.log(receive_arg);
+        }
+
+        const sum = (value1, value2, result) =>{
+            setTimeout(() =>{
+                var total= value1 + value2;
+                result(total);
+            },5000)
+            
+        }
+        sum(10, 10, result);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- addEventListener -->
+    <button id = "add_event">CLick me</button>
+
+    <!-- Bubbling-->
+    <div id="bubbling_div" style="background-color: aqua; height: 100px;">
+        <p id="bubbling_p" style="background-color: rgb(121, 214, 33);">
+            It's Bubbling.
+        </p>
+    </div>
+
+    <!-- Capturing -->
+    <div id="Capturing_div" style="background-color: aqua; height: 100px;">
+        <p  id="Capturing_p"  style="background-color: rgb(28, 194, 36);">
+            It's Capturing.
+        </p>
+    </div>
+
+    <script>
+        // document.addEventListener('DOMContentLoaded' , function(e){
+        //     alert("Document has been loaded successfully")
+        // })
+        // add_event.addEventListener('mouseout', function(e){
+        //     alert("Mouseout event start")
+        // });
+        // add_event.addEventListener('mouseover', function(e){
+        //     alert("Mouseover event start")
+        // });
+
+        // Bubbling and capturing
+        document.getElementById("bubbling_div").addEventListener("click", function(){
+            alert("Bubbling div");
+        },false);
+
+        document.getElementById("bubbling_p").addEventListener("click", function(){
+            alert("Bubbling P");
+        },false);
+
+        document.getElementById("Capturing_div").addEventListener("click", function(){
+            alert("capturing div");
+        },true);
+
+        document.getElementById("Capturing_p").addEventListener("click", function(){
+            alert("capturing P");
+        },true);
+
+
+    </script>
+</body>
+</html>

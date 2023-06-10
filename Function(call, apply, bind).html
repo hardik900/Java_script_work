@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("----------------------Call, apply, Bind--------------------")
+        
+        // Call Method
+        let userDetails = {
+            name: "Hardik saini",
+            Age : 28,
+            Designation: "SDE",
+        }
+
+        let printDetails =  function(state, country){
+            console.log(this.name + " " + state + " " + country);
+        }
+        //printDetails.call(userDetails,"Delhi", "india");
+
+        let userDetails2 = {
+            name: "Chirag saini",
+            Age : 18,
+            Designation: "SSDE",
+        }
+
+       // printDetails.call(userDetails2, "Delhi", "india");
+
+        // Apply Method
+        console.log("--------------using apply method--------------");
+        printDetails.apply( userDetails2, ["Surat", "India"]);
+    
+        //console.log("-------------------using Bind Method------------------")
+    
+    </script>
+</body>
+</html>

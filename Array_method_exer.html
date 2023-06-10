@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Q1. remove duplicate from array
+        const crr = [1,4,7,1,6,0,7,2,9,2,0,7];
+        console.log("using set Method", new Set(crr));
+        // const arr =["4","2","4","2","7","10","8","4","10","90","9","9","7","90","9","3","8","9","1","90","7","8","1"];
+        // arr.sort();
+        // for(i=0; i<=arr.length-1; i++){
+        //     if(arr[i] !== arr[i+1]){
+        //         brr = arr[i];
+        //         console.log(brr);
+        //     }
+        // }
+        // console.log(arr);
+        const arr = [1,4,7,1,32,23,32,23,6,0,7,2,9,2,0,7];
+        console.log(arr.sort());
+        arr.sort();
+        for(i=0; i<=arr.length; i++){
+            if(arr[i] !== arr[i+1]){
+                brr = arr[i];
+                console.log(brr);
+            }
+        }
+        console.log(arr);
+
+        // check given input is array or not
+        const check = receive_arr =>{
+            var object;
+            var check = typeof(receive_arr);
+            console.log(check);
+            if(check === "object"){
+                console.log("It is a array")
+            }
+            else{
+                console.log("It is not a array")
+            }
+        }
+        
+        check([2,3,4,1,65,34,5]);
+
+        var drr = [2,32,4,2,87,56,3];
+        drr.forEach((n)=>{
+            console.log(n);
+        });
+
+        console.log("----------ForEach------")
+
+        drr.forEach(myfun);
+        function myfun(n){
+            console.log(n);
+        }
+        
+        // console.log("------------map method-------------");
+        var grr = [2,3,43,65,88,3,11,05,1]
+        grr.map(myfun1)
+        function myfun1(n, i, grr){
+            ss = n
+            console.log(ss)
+            console.log(grr);
+        }
+
+        console.log("--------------------filter_method------------------");
+        let jrr = [3,5,1,9,2];
+        let ff = jrr.filter((n) => {
+            return n<5;
+        });
+        console.log(ff);
+
+        console.log("------------------reduce_method-1-----------------------")
+        let krr = [1,2,3,5,2,1,1];
+        let q = krr.reduce((n,n1) => {
+            return n+n1;
+        });
+        console.log(q);
+
+        console.log("------------------reduce_method-2-----------------------")
+        const a = [
+            {
+                num: 10
+            },
+            {
+                num: 10
+            },
+            {
+                num: 10
+            },
+            {
+                num: 10
+            },
+            {
+                num: 10
+            }
+        ];
+        let ll = a.reduce((p,p1) =>  p + p1.num,0);
+        console.log(ll);
+
+        console.log("------------------reduce_method-3-----------------------")
+        // const array = [
+        //     {name:"amazon", s_year:200, e_year:"3000"},
+        //     {name:"Netflix", s_year:3000, e_year:"4000"},
+        //     {name:"Paytm", s_year:4000, e_year:"5000"},
+        //     {name:"Apple", s_year:5000, e_year:"6000"},
+        // ];
+
+        const array =  [1,2,3,4,5,6,7,8,9,10];
+        let total =0;
+        const ee = array.reduce(function(total,year){
+            return total+year;
+        },0);
+
+        console.log(ee);
+
+        console.log("--------------------Filter_method-------------------")
+        let z="";
+        let stor = array.filter(function(age){
+            if(age>5){
+                return true;        
+            }
+        });
+        console.log(stor)
+
+        // join all element of array using + sign
+        console.log("Using join " +grr.join(" + "))
+
+        // find most repeated element from array
+        const arr1=[3, 'a', 'a', 'a' ,'a', 2 , 3 ,3 , 3 , 3 , 3 , 3 , 3 , 3 , 'a', 3, 'a', 2, 4, 9, 3];
+        let store = 1;
+        let m = 0;
+        let item;
+        for (let i=0; i<arr1.length; i++)
+        {
+                for (let j=i; j<arr1.length; j++)
+                {
+                        if (arr1[i] == arr1[j])
+                        m++;
+                        if (store<m)
+                        {
+                        store=m; 
+                        item = arr1[i];
+                        }
+                }
+                m=0;
+        }
+        console.log(`${item} ( ${store} times ) `) ;
+
+    </script>
+</body>
+</html>
