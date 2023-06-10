@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Enter Guest Name</label>
+    <input type="text" name="" id="nam">
+    <button onclick="myfunc()">click here</button>
+    <p id="display"></p>
+</body>
+<script>
+    const list =[
+        "Dishant",
+        "Hardik",
+        "Vishal",
+        "Sam",
+        "Yash",
+    ];
+    function myfunc(){
+        var nam = document.getElementById('nam').value;
+        // var nam = nam.uppercase;
+        
+        
+        var print=0;
+        for(var i=list.length; i>=0; i--)
+        {
+            if(nam == list[i]){
+                var print = 1;
+                break;
+            }
+        }
+        if(print == 1){
+            document.getElementById('display').innerHTML="Welcome You were invited";
+        }
+        else{
+            document.getElementById('display').innerHTML="Oh! Sorry You were not invited";
+        }
+        
+    }
+</script>
+</html>
