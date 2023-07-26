@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="hello.js">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Event -->
+    <button onclick="this.innerHTML ='After click'">Before click</button>
+    
+    
+    
+    <script>
+        var a=10;
+        console.log(a);
+
+
+        var hh = () =>{
+            let b = "Hardik"
+            console.log(b);
+            const d = "Chirag";
+            console.log(d);
+            
+        }
+
+        hh()
+        // console.log("type of function is " + typeof(hh));
+
+        let b="saini";
+        console.log(b);
+        const d = "Gupta";
+        console.log(d);
+        
+
+        // create Object
+        const arr = {
+            fname : "hardik",
+            lname : "saini",
+            class : "4",
+            Age : "20",
+            fullName : function(){
+                return this.fname + " " + this.lname;
+            }
+        };
+        console.table(arr);
+        console.log([arr.fname]);
+        console.log(arr.fullName());
+        // console.log("type of object is " + typeof(arr));
+
+        // function call without () then it will return function defination or object not function result
+        function hello(){
+            a=10;
+            console.log(a);
+        }
+
+        console.log(hello);
+
+</script>
+</body>
+</html>

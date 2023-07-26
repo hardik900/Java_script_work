@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function hardik(){
+            let delhiWeather = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve("27 deg")
+                },5000);
+            });
+
+            let bangloreWeather = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve("21 deg")
+                },8000);
+            });
+            console.log("Wait for sometime delhi Weather details are fetching");
+            let delhiW = await delhiWeather;
+            console.log("Fetched delhi weather" + " " + delhiW);
+
+            console.log("Wait for sometime banglore Weather details are fetching");
+            let bangloreW = await bangloreWeather;
+            console.log("Fetched banglore weather" + " " + bangloreW);
+        }
+        const chirag = async () =>{
+            console.log("Chirag is executed");
+        }
+
+        async function main2(){
+            let a =  await hardik();
+            let b =  await chirag();
+        }
+
+        main2();
+        
+        
+        // async function hardik(){
+        //     return 2;
+        // }
+
+        // hardik().then((x) => {
+        //     console.log(x);
+        // })
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("----------------------------Map_method----------------------");
+        const create_map = new Map();
+
+        create_map.set("q", 100);
+        create_map.set("w", 200);
+        create_map.set("e", 300);
+        create_map.set("r", 400);
+        create_map.set("t", 500);
+        create_map.set("y", 600);
+        console.log(create_map);
+
+        console.log(create_map.get("q"));
+        console.log(create_map.delete("e"));
+        console.log("After deleted key ", create_map);
+        
+        console.log(create_map.has("3"));
+        console.log("Iterator object" ,create_map.entries());
+        console.log(create_map.size);
+
+        create_map.forEach(function(n){
+            console.log(n);
+        });
+    </script>
+</body>
+</html>

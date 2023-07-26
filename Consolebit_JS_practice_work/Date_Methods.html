@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        current Time is <span id="time"></span>
+    </div>
+    <script>
+        // var date = new Date(year, month, date, hours, minutes, seconds, milliseconds);
+        // console.log(date);
+        // console.log(date.getDate());
+        // console.log((date.getMonth())+1);
+        // console.log(date.getFullYear());
+
+        var now = new Date();
+        console.log(Date.now());
+
+        var newdate = new Date("2031-1-3");
+        console.log(newdate);
+
+        setInterval(updateTime, 1000);
+
+        function updateTime(){
+            // time.innerHTML = new Date();
+            console.log(new Date());
+        }
+
+    </script>
+</body>
+</html>

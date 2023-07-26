@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("----------------Array_Methods---------------------");
+        const arr = ["Apple", "Banana", "Orange", "Mango","Banana", "Aanar"];
+        var nums = [6,3,99,1,33,8,12];
+        console.log(arr);
+
+        var brr = ["Pomegranate", "Aanar"];
+        console.log(arr.length)
+        console.log(arr.toString());
+        console.log(arr.join(" || "));
+
+        console.log(arr.push("Grapes"));
+        console.log(arr);
+
+        console.log(arr.pop());
+        console.log(arr);
+
+        console.log(arr.shift());
+        console.log(arr);
+
+        console.log(arr.unshift("Apple"));
+        console.log(arr);
+
+        // console.log(delete arr[1]);
+        // console.log(arr);
+        // console.log(typeof(arr[1]));
+
+        console.log(crr = brr.concat(arr));
+
+        console.log(arr.reverse());
+        console.log("------------------------------bghb-------------------")
+        const qq = [1,65,45,343,6,3,2];
+        console.log(qq)
+        console.log("SPLICE")
+        console.log(qq.splice(2, 3, "jamun", "grapes", "fnvh"));
+        console.log("SLICE");
+        console.log(qq.slice(-4,-1))
+        console.log("----------------Math_Min_Max---------------")
+        console.log(maxvalue(nums));
+        console.log(minvalue(nums));
+        function maxvalue(receive){
+            return Math.max.apply(null, receive);
+        }
+        function minvalue(receive){
+            return Math.min.apply(null, receive);
+        }
+
+        console.log("----------------forEach_method--------------------")
+        nums.forEach(function(n){
+            console.log(n);
+        });
+        
+        console.log("------------forEach_Another_method-------------");
+        arr.forEach(myfunction)
+        
+        function myfunction(n){
+            console.log(n);
+        }
+    </script>
+</body>
+</html>

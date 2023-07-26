@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+    <script>
+        let arr = [2,34,4,6,54];
+        let [a, ,...rest] = arr;
+        console.log(rest)
+        console.log(a,rest)
+
+        let brr = [2,3,1,7,0,8]
+        let obj = {...brr};
+        console.log(obj);
+
+        // object destructuring
+        const obj1={name:"hardik", clas:"1", sub:"Hindi"}
+        let {name,clas,sub} = obj1;
+        console.log(`${name}  ${clas}  ${sub}`)
+
+    </script>
+</body>
+</html>

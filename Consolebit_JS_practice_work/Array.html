@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var car =["Bmw", "Volvo", "Tata"];
+        const hello = ["4", "9", "3"];
+        console.log(car[0]);
+        console.table(car);
+        var i=0;
+        var text = "";
+        console.log(len=car.length);
+        for(i=0;  i<len; i++ ){
+            text = text + car[i];
+        }
+        console.log(text);
+        
+        // console.log(car.sort());
+        // console.log(hello.sort());
+
+        console.log("----------------ForEach-Method----------------")
+        car.forEach(function(n, i, car){
+            console.log(n, i, car);
+        });
+
+        console.log("-----------------forEach-Another-Method----------------------")
+        hello.forEach(myfunction)
+
+        function myfunction(n, i, hello){
+            console.log(n, i, hello);
+        }
+
+        console.log("-----------Array objects----------")
+        const arrobj =[
+                {
+                    Name: "Hardik",
+                    class: 3,
+                    subject: "hindi",
+                    age: 20,
+                },
+                {
+                    Name: "Hardik",
+                    class: 3,
+                    subject: "hindi",
+                    age: 20,
+                }
+        ];
+        console.log(arrobj[0].class);
+        console.log(arrobj[0].age);
+        console.log(arrobj[1].Name);
+        console.log(arrobj[1].subject);
+    </script>
+    
+    
+</body>
+</html>

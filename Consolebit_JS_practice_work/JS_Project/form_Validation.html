@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .form-container{
+            background-color: aqua;
+            width: 50%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <p id="demo"></p>
+    <div class="form-container">
+        <div class="form">
+            <label for="" >Username</label>
+            <input type="text" id="username"> <br>
+            <label for="" >Number</label>
+            <input type="number" id="number"> <br>
+            <label for="">Age</label>
+            <input type="number" id="age"> <br>
+            <label for="">E-mail</label>
+            <input type="mail" id="mail"> <br>
+            <input type="submit" value="Submit" onclick="validate()" >
+        </div>
+    </div>
+    <script>
+        function validate(){
+            var username = document.getElementById("username").value;
+            var number = document.getElementById("number").value;
+            var age = document.getElementById("age").value;
+            var mail = document.getElementById("mail").value;
+            console.log(mail)
+            
+
+
+            if(username === ""){
+                alert("Fill the username field");
+            }
+            else if(number=="")
+                alert("Fill the Number field")
+            else if(number.length < 10){
+                alert("Enter a valid Mobile number")
+            }
+            else if(age == ""){
+                alert("Fill the Age field")
+            }
+            else if(age < 18 && age > 70 ){
+                alert("Please Enter age above 18")
+            }
+            else if(age > 70){
+                alert("Please Enter age below 70")
+            }
+            else if(mail == ""){
+                alert("Fill the E-Mail field")
+            }
+            else if(mail == " "){
+                alert("Remove space from input")
+            }
+            else if (mail === mail.includes("@")){
+                alert("Enter a valid E-mail")
+            }
+            else{
+                alert("Data Added successfully");
+            }
+        }
+        
+
+    </script>
+</body>
+</html>

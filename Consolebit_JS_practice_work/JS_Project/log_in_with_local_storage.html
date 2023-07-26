@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Log In</h2>
+    <div>
+        <form action="">
+            <label for="">E-mail</label>
+            <input type="email" id="log_email"> <br>
+            <label for="">Password</label>
+            <input type="password" id="log_pwd"> <br>
+            <input type="button" value="Login" onclick="login()">
+        </form>
+    </div>
+
+    <p id="demo"></p>
+    <script>
+        function login(){
+            let log_email = document.getElementById("log_email").value;
+            let log_pwd = document.getElementById("log_pwd").value;
+            let logMail = localStorage.getItem("E-mail")
+            let logPwd = localStorage.getItem("Password")
+            let nameFirst = localStorage.getItem("firstname")
+            let nameLast = localStorage.getItem("Lastname")
+
+            if(log_email == logMail && log_pwd==logPwd){
+                document.getElementById("demo").innerHTML = `Welcome ${nameFirst} ${nameLast}`
+                // console.log("done")
+            }else{
+                document.getElementById("demo").innerHTML = "Error"
+            }
+        }
+        
+    </script>
+</body>
+</html>

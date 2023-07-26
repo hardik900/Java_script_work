@@ -1,0 +1,691 @@
+
+JavaScript =>
+		JavaScript is a dynamically typed language means it can change the type of data at run time 
+
+
+28/11/2022
+
+=>document.write = Using document.write(),it will delete all existing HTML contenet
+=>window.alert = it is a global object can be access anywhere throughout the code
+
+
+
+=>The JavaScript syntax defines two types of values:
+
+Fixed values -:
+	Fixed values are called Literals.
+Variable values- :
+	Variable values are called Variables.
+
+
+=>let 
+	1. It will not declare a variable again but reassign a value again out of the scope.
+	example- :
+		var hh = () =>{
+            let b = "Hardik"
+            console.log(b);
+        }
+
+        hh()
+
+        let b="saini";
+        console.log(b);
+		
+=>Three ways to declare a variable in javascript
+	1. Var
+	2. Let
+	3. const
+	
+=>Types of data types in js
+											
+		
+		
+	
+=>Hoisting- :
+	we will use a variable without declare it.
+	example- :
+		name="hardik";
+		var name;
+		
+		
+=>There are different types of JavaScript operators:
+
+	Arithmetic Operators (+,-)
+	Assignment Operators  (=,+=)
+	Comparison Operators  (==,===,!==,!===)
+	Logical Operators		(&&,||,!)
+	Conditional Operators	()
+	Type Operators			(typeof(), instanceof())
+	
+	
+=>object
+	const arr = {
+            name : "hardik",
+            class : "4",
+            Age : "20"
+        };
+        console.table(arr);
+		
+		here name,class, age are properties of arr object
+
+
+=>This-:
+	this will refer to the present element where it is present.
+							
+	
+=>Escape sequence
+	code		result
+	1.\'		'
+	2.\"		"
+	3.\\		\
+	
+	--------------------------------string method---------------------------------
+=>String method(All string method are return a new string they can't modify the existing string)
+
+	1. slice(start, end) -> if we take parameter in plus(+) then last parameter will not consider
+				if we take parameter in minus(-) then starting parameter will not consider
+				
+	2. substring(start, end) ->	it will not take minus parameter if parameter are come in minus then it will consider it as a 0 index.
+					start and end values less than 0 are treated as 0.
+					
+	3. substr(start, length) -> here first element is starting element and second element is length of string.
+	
+	4. replace(kis se replace karna hai, kya replace karna hai) -> 
+									  it replace the specified part of the string.
+				 					  it returns the new string.
+				  					  it replace only the first match.
+									  case sensitive.
+									  To replace case insensitive, use a regular expression with an /i flag (insensitive).
+				
+	5. replaceall -> 	it will replace all the what user wants 
+	
+	6. uppercase
+	7. lowercase
+	8. concat -> 		Add two strings.
+	9. trim  -> 		it is used to remove the whitespace from the string both side.
+	10. charAt -> 		It returns character at specified index.
+ 	11. charCodeAt -> 	it returns a UTF-16 code (integer between 0 and 65535).
+	12. split() -> 		string can be converted to an array 
+	
+	
+	
+	
+	
+29/11/2022
+	
+	---------------------------string search methods-------------------------------
+	            var string1 = "I am a Frontend developer in Consolebit.";
+
+	1. indexof() -> 	It return the index number of word which you want present in the string.
+						if word not found it return -1.
+						
+	2. lastIndexOf -> 	it return the last occurence of particular word.
+	
+	3. search -> 		it return the position or index of the given search item.
+						if it not found given search item it return -1.
+	
+	4. match -> 		it return array containing result.
+						for global match use (name of the word you want to match/g/)
+						for case insensitive use (name of the word you want to match/g/i)
+						
+	5. matchall -> 
+	
+	6. includes -> 		if it finds given word return true else false.
+	
+						console.log(string1.includes("Consolebit",10)); ->
+																			it will check whether Consolebit is present after 10th index or not.
+						
+	7. startsWith -> 	if the string starts with given word return "true" else "false".
+						console.log(string1.startsWith("am", 2)) ->
+																	if the "am" present in the index = 2 then return "true" else "false".
+																	
+	8. endsWith -> 		opposite to starsWith.
+	
+	9. String interpolation
+	
+	
+	
+	------------------------------------Numbers-------------------------------------------------
+	1. when we (substract, multiply, divide) two strings then javascript will convert the string to number.
+		Addition is not perform because it is used for concatenation in js.
+		
+	2. NaN -> 
+			var x = x;
+			var y = 10;
+			console.log(z = (x+y));
+								here in this example we see that one number is added to other Non-number it will NaN(Not a number)
+	
+			console.log(typeof(NaN));
+								Type of NaN is Number.
+								
+	3. Infinity
+	
+	4. -Infinity
+	
+	5. tostring
+	
+	6. The new keyword complicates the code and slows down execution speed.
+	7. comparison of two object will return always "false"
+	
+	8. BigInt -> it is used to display value beyond the range of it.
+	
+	9. if a number is not converted then it will return NaN.
+	
+	----------------------------Number-Methods----------------------------
+	
+	1. tostring() ->		return a number as string
+	2. toexponential()->	
+	3. tofixed() -> 		
+						x = 8.433;
+						x.tofixed(2);
+						here it will return only two value after decimal.
+	4. toprecision() ->
+						x = 8.433;
+						x.toprecision(3);
+						here it will return length of 3.						
+			
+	5. valueof() ->  	return a number as a number
+	6. parseint()
+	7. parsefloat()
+	
+	
+	------------------------Properties of Number------------------------
+	
+	1. Number.EPSILON
+	2. Number.MAX_VALUE
+	3. Number.MIN_VALUE
+	4. Number.MAX_SAFE_INTEGER
+	5. Number.MIN_SAFE_INTEGER 	
+	6. Number.POSITIVE_INFINITY -> return infinty 
+	7. Number.NEGATIVE_INFINITY	-> return -infinty
+	8. NaN
+	
+	
+	----------------------------Array-----------------------------------
+	
+	1. associative arrays (or hashes)-:
+										Arrays with named indexes.
+										it is not support is javascript.
+										
+	2. forEach ->
+					car.forEach(function(n, i, car){
+						console.log(n, i, car);
+					})
+					
+					here in this example i=index, car=array are optional.
+					forEach method take atleast function.	
+					It calls a callback function.
+					
+	3. Array object ->
+						const arrobj =[
+						{
+							Name: "Hardik",
+							class: 3,
+							subject: "hindi",
+							age: 20,
+						},
+						{
+							Name: "Hardik",
+							class: 3,
+							subject: "hindi",
+							age: 20,
+						}
+						];
+
+						console.log(arrobj[0].class);
+						console.log(arrobj[0].age);
+						console.log(arrobj[1].Name);
+						console.log(arrobj[1].subject);
+	
+	
+	
+	=> Typed Array -:
+			
+	--------------------------------------Array_Method--------------------------------------
+	
+	1. tostring -> 	convert array to string or return string.
+	
+	2. join		-> 	work same as tostring and return string but in addtion time we se specify separater.
+					like -> 
+						   const arr = ["Apple", "Banana", "Orange", "Mango"];
+						   console.log(arr.join("^ "));
+	
+	3. push 	-> 	push at the end index value of array
+					return length of the array.
+	
+	4. pop 		-> 	return pop element.
+	
+	5. shift	->	pop element from 0 index value.
+					return pop element.
+					
+	6. unshift	->	push element on 0 index value.
+					return length of array.
+					
+	7. delete	->	delete the particular index value but left undefined holes in the array.
+					Always return true.
+					
+	8. concat 	->	it will do nothing in the existing array it will return new array.
+	
+	9. slice	->	it is used to slice out from array.
+	
+	10. splice	->	It is used to add element in an array.	
+					It return the deleted the item of the array
+					ex-	
+						const qq = [1,65,45,343,6,3,2];
+						console.log(qq.splice(3, 2, "jamun", "grapes", "fnvh"))
+						
+					It takes 4 argument
+						first arguments 	-> 	index number from which elements added.
+						Second arguments	->	how many elments are added after index number.
+						third arguments 	->	name the element which you want to added
+						fourth arguments	->			;;
+	
+	11. sort	-> 	modify original array
+	
+	12. reverse	->	it return the reverse array.
+	
+	13. compare ->  
+	
+	14. Fisher yates Method ->
+	
+	15. map		->	it will create a new array by performing operations on every element.
+					it will take arguments same as forEach
+					it return array.
+
+	16. Filter	->	It filters an array according to given condition or test cases which are written by developer.
+					it return a new array with values which satisfy the given condition.
+					it return array.
+					
+	17. Reduce 	->	It reduce an array to a single value.		
+					It will not reduce the original array.
+					it return a single value.
+					
+	18. ReduceRight	->	This method works from left-to-right.
+						It will take 4 arguments.
+						
+	19. Every		->	it will check all values of array according to given condition
+						return True if all value satisfy the condition else false.
+						
+	20.	Some		->	it some of the values are satisfy the condition then return true else false.
+	
+	21.	IndexOf		->	It return the index value element which you want.
+	
+	22. lastIndexOf	->
+	
+	23. find		->	It return the first value which pass the test function.
+	
+	24. findIndex	-> 	It return the Index value of first element which pass the Test function.
+	
+	25. 
+	
+	
+	
+05/12/2022
+
+------------------------------Types of Loops------------------------
+
+		1. for 
+		2. for/in
+		3. for/of
+		4. while
+		5. do/while
+
+
+1. for
+
+2. for in 	-> 	it iterates the keys of the object using index value.
+				it returns the key of the object.
+				symbol data type are ignored in for in loop.u
+
+3. for of	->	it iterates the values of the object.
+				it returns value of the keys if the object is iterable else not return the value.
+
+4. while
+
+5. do while	
+
+
+-----------------------------Sets and Set_Method---------------------------------
+	Sets -> 
+			It holds only unique values.
+			it remove repeatation from sets.
+			we can't access element directly in sets first we convert it into array using spread operater.
+			 
+
+	Methods					Description
+	1. new Set()	->	  	Creates a new Set
+    
+	2. add()	 	->   	Adds a new element to the Set
+    
+	3. delete()  	->   	Removes an element from a Set
+							It return boolean value according to specified condition.
+    
+	4. has()	 	->   	Returns true if a value exists in the Set
+    
+	5. forEach() 	->	  	Invokes a callback for each element in the Set
+    
+	6. values()  	->	  	Returns an iterator object with all the values in a Set
+    
+	7. Property  	->	  	Description
+    
+	8. size	  	 	->   	Returns the number of elements in a Set
+	
+	
+-----------------------------Map and Map_Methods-------------------------
+
+	Map	->	It hold key value pairs where keys are datatype.
+			it remembers the original insertion order of the keys.
+			
+	Method					Description
+	1. new Map()	->		Creates a new Map
+							it return a new array.
+	
+	2. set()		->		Sets the value or insertion for a key in a Map
+	
+	3. get()		->		Gets the value for a key in a Map
+	
+	4. delete()		->		Removes a Map element specified by the key
+							it return boolean value.
+	
+	5. has()		->		Returns true if a key exists in a Map else false.
+	
+	6. forEach()	->		Calls a function for each key/value pair in a Map
+	
+	7. entries()	->		Returns an iterator object with the [key, value] pairs in a Map
+	
+	8. Property		->		Description
+	
+	9. size			->		Returns the number of elements in a Map
+	
+	
+---------------------------------------TypeOf----------------------------------------------
+
+=>	typeof always return a string. 
+
+=>	5 Data types that contain values -:
+
+		1. boolean 
+		2. function
+		3. Number
+		4. object
+		5. String 
+		
+
+=>	6 types of objects
+		
+		1. Array
+		2. Boolean
+		3. Date
+		4. Number
+		5. object
+		6. string
+		
+
+=> 	2 Data types that can't contain value
+		1. Null
+		2. Undefined
+		
+		
+-----------------------------------Type_conversion-------------------------------------------
+
+		1. Converting Strings to Numbers
+		2. Converting Numbers to Strings
+		3. Converting Dates to Numbers
+		4. Converting Numbers to Dates
+		5. Converting Booleans to Numbers
+		6. Converting Numbers to Booleans
+		
+
+-----------------------Automatically type conversion--------------------------
+	
+		5 + null    // returns 5         because null is converted to 0
+		"5" + null  // returns "5null"   because null is converted to "null"
+		"5" + 2     // returns "52"      because 2 is converted to "2"
+		"5" - 2     // returns 3         because "5" is converted to 5
+		"5" * "2"   // returns 10        because "5" and "2" are converted to 5 and 2
+		
+------------------------------------Error_handling-------------------------------------------
+
+1. try
+2. throw	->	it is use to throw custom error.	
+3. catch
+4. finally ->	it will execute regardlessly(Bina kuch dhyan diye) of the try/catch block.
+
+=> Error object Properties
+	it created with two properties.
+
+	1. name		->		it return the error name.
+	2. message	->		it return the error message in string.
+	
+
+=> error name property returned Six different values :-
+		Error Name					Description
+		
+		1. EvalError		->		An error has occurred in the eval() function
+		2. RangeError		->		A number "out of range" has occurred
+		3. ReferenceError	->		An illegal reference has occurred
+		4. SyntaxError		->		A syntax error has occurred
+		5. TypeError		->		A type error has occurred
+		6. URIError			->		An error in encodeURI() has occurred (Uniform Resource Identifier).
+		
+		
+
+--------------------------------------------Scope---------------------------------------------------
+
+	3 types of scope-:
+	
+	1. Block scope 		->	In block scope variable declared inside can't be accessed outside.
+							ex -> let, const.	
+	
+	2. function scope 		
+	
+	3. Global scope	->	Variable declared outside the function is known as Global scope.
+						If variable is not declared with (var, let, const) then it will automatically become global scope.
+						var, let, const declare outside the block then they have global scope.
+	
+	
+-----------------------------------------Hoisting------------------------------------------------------
+
+=> Always declarations are hoisted not intializations.
+
+=> when we use hoisting with var it will done
+=> but when we hoisting with let and const they hoisted but both go in temporary dead zone.
+=> function and class expression are not hoisted.
+
+
+
+
+08/12/2022
+----------------------------------------Function--------------------------------------------------------
+
+=> If a function is stored in a variable then it will not need the function name to call or invoke we will inbvoke it by variable name.
+
+=> arguments.length ->
+						it is used to know that how many arguments are passed in a function.
+						
+=> toString ->
+				it used to return the functio as string.
+	
+				
+=> function Method ->
+						1. call
+						2. Apply
+						3. Bind
+				
+	
+	1. call ->
+				it is used to point out another object through one object using this or wthout this.
+				ex-:
+						
+					        // Call Method
+							let userDetails = {
+								name: "Hardik saini",
+								Age : 28,
+								Designation: "SDE",
+							}
+
+							let printDetails =  function(state, country){
+								console.log(this.name + " " + state + " " + country);
+							}
+							printDetails.call(userDetails,"Delhi", "india");
+
+							let userDetails2 = {
+								name: "Chirag saini",
+								Age : 18,
+								Designation: "SSDE",
+							}
+
+							printDetails.call(userDetails2, "Delhi", "india");
+				
+	2. Apply ->
+					only difference between call and apply is we can pass array list instead of single passing parameter 
+					like in the above example we pass "Delhi", "india" individually.
+					ex -:
+					
+
+						let userDetails = {
+							name: "Hardik saini",
+							Age : 28,
+							Designation: "SDE",
+						}
+
+						let printDetails =  function(state, country){
+							console.log(this.name + " " + state + " " + country);
+						}
+
+						let userDetails2 = {
+							name: "Chirag saini",
+							Age : 18,
+							Designation: "SSDE",
+						}
+
+
+						// Apply Method
+						console.log("--------------using apply method--------------");
+						printDetails.apply( userDetails2, ["Surat", "India"])
+					
+	3. Bind ->	
+				
+	
+=> setTimeout ->
+				It is used to call a function after the given interval of time.
+				it return timer id.
+				ex-:
+					let sum = (a,b) =>{
+						console.log(a+b);
+					}
+
+					setTimeout(sum, 2000, 3, 4); 
+					
+				we can pass 4 parameter in setTimeout method 
+				1. function name.
+				2. delay
+				3. argument1
+				4. argument2
+				
+=> clearTimeout ->
+					it is used to stop the execution of program after timer ID received.
+					
+=> setInterval ->
+						it is used to call the function infinte time in the given interval.
+						ex -:
+							// setInteval
+							let sum1 = (n,n1) =>{
+								console.log(n+n1);
+							} 
+							aa = setInterval(sum1, 3000, 4, 9);
+							console.log("Return Timer ID of setInterval = " + aa);
+							
+=> clearInterval -> 
+					it is used to stop the execution of program after timer ID received.
+					ex -:
+						ex -:
+							// setInteval
+							let sum1 = (n,n1) =>{
+								console.log(n+n1);
+							} 
+							aa = setInterval(sum1, 3000, 4, 9);
+							console.log("Return Timer ID of setInterval = " + aa);
+							clearInterval(aa);
+
+
+----------------------------------------This keyword------------------------------------------------
+
+=>	In an object method, this refers to the object.
+
+=>	Alone, this refers to the global object.
+
+=>	In a function, this refers to the global object.
+
+=>	In a function, in strict mode, this is undefined.
+
+=>	In an event, this refers to the element that received the event.
+
+=>	Methods like call(), apply(), and bind() can refer this to any object.
+
+
+-----------------------------------------Local_Storage----------------------------------------------
+
+=>	local Storage ->
+						It is present in browser
+						
+ 
+ Methods of localStorage are-:
+ 1.	getItem
+ 2.	setItem
+ 3. removeItem
+ 4. localStorage.clear
+ 
+ 
+=>	Promise ->	
+				The solution of callback is promises.
+				A Promises is a promise of code execution, the code either executes or fails in both the condition the developer 
+				will be notified 
+				
+				resolve and reject are two callbacks provided by js.
+				
+				resolve(value) -> If the job is finished successfully.
+				reject(error)  -> If the job fails
+				
+				promise has two object but we can't access it directly
+				1. state ->
+							it is intially pending it changes either fulfilled when resolve is called or rejected when reject is called. 
+				
+				2. result -> 	
+							Intially Undefined then changes to value if resolved or error when rejected
+						
+				
+				then ->
+						it is used to execute something else after promise is executed.
+						we can catch errors also in then
+				
+				catch ->
+						it is used to catch the errors or handle the errors and display some message.
+						
+	Promise chaining
+	
+	Promise_API ->
+					1. 	Promise.all(promises) ->
+												It wait for all promises to resolve and returns the array of their results.
+												If any one of the Promises is fail, it becomes show an error and all other results are ignored.
+					
+					2.	Promise.allSettled(promises) ->
+													It wait for all promises to settle and returns their results as an array of objects with status and value.
+			
+					3.	Promise.race(promises) ->
+												It wait for the first Promise to settle and returns their results/error becomes the output.
+			
+					4.	Promise.any(promises) -> if one promise is rejected it will try another 
+												 it wait for the first promise to fulfill not rejected and it's result becomes the outcome
+												 it throws Aggreagate error if all the promises are rejected.
+												
+					
+					5.	Promise.resolve(promises) -> it makes the resolved promises with given value.
+					
+					6.	Promise.reject(promises) -> it makes a rejected promises with the given error.
+					
+
+------------------------------------async and await-------------------------------------------------
+
+=>	async ->
+			It return a promise always

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+                // Hardik
+        var w=0;
+        var i=-1;
+        var t=0;
+        
+            var count = () =>{
+                if(i < 0){
+                    for (i = 1;  i <= 10; i++) {
+                        console.log(i);
+                    }
+                }
+                else{
+                    w+=10;
+                    for (i = 1;  i <= 10; i++){
+                        console.log(i+w);
+                    }
+                }
+                if(w >= 40){
+                    clearInterval(qq);
+                    console.log("END OF PROGRAM");
+                }
+            } 
+
+        count();
+        let qq = setInterval(count, 20000);
+
+
+        // Chetan sir
+        // var w=0;
+        // var i=-1;
+        // var t=0;
+        
+        //     var count = () =>{
+        
+        // let a= setInterval(() => {
+        //     w+=1
+        //     t+=1
+        //     console.log(w);
+        //     if (t==10) {
+        //         t=0
+        //         clearInterval(a)
+        //     }
+        // }, 1000);
+        // } 
+
+        // count();
+        // let qq = setInterval(count, 20000);
+        
+
+
+
+        // aa = setInterval(function(){
+        //     for(i=1; i<=10; i++){
+        //         if(i == 11 || i == 21 || i == 31 || i == 41 || i == 51 ){
+        //             bb = setInterval(function(){
+        //                 console.log(i);
+        //             },1000);
+        //             clearInterval(bb);
+        //         }
+        //         else{
+        //             console.log(i);
+        //         }
+        //     }
+        // },10000);
+        // clearInterval(bb);
+
+
+
+        //another
+        // for(i=1; 1<=60; i++){
+        
+        //     if(i == 11 || i == 21 || i == 31 || i == 41 || i == 51 ){
+        //         cc = setInterval(function(){
+        //             console.log(i);
+        //         },1000);
+        //     }
+        //     else{
+        //         console.log(i);
+        //     }
+        
+        // }
+
+
+
+
+
+        // another
+        // var  p = 0;
+        // var i=0;
+        // var sum = () =>{
+        //         if( i < 1){
+        //             p+=1;
+        //             console.log(i+p);
+        //         }
+        // }
+        // sum();
+        // nn = setInterval(sum, 500);
+        
+
+
+    </script>
+</body>
+</html>

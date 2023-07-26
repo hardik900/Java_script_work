@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="value">
+    <button onclick="addItem()">click here</button>
+    <h4 id="item_list" onclick="close()" style="background-color: aqua; margin-bottom: 12px;"></h4> <br>
+    <script>
+        function addItem(reset){
+            let value = document.getElementById('value').value;
+            console.log(value)
+            let p = document.createElement('p');
+            let p_textNode = document.createTextNode(value)
+            p.append(p_textNode)
+            let a = document.getElementById("item_list").appendChild(p);
+            // P.classList.add('cl');
+            document.getElementById('value').value ='';
+        }
+    </script>
+</body>
+</html>
